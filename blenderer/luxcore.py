@@ -36,7 +36,7 @@ def render_rgb(output_directory='.', device='CPU', engine='PATH', sampler='SOBEL
             bpy.context.scene.luxcore.config.metropolis_imagemutationrate = 0.10
 
         bpy.context.scene.luxcore.config.use_animated_seed = True
-        bpy.context.scene.luxcore.config.light_strategy = "LOG POWER"
+        bpy.context.scene.luxcore.config.light_strategy = "LOG_POWER"
 
     bpy.context.scene.luxcore.config.path.use_clamping = False
 
@@ -58,10 +58,10 @@ def render_rgb(output_directory='.', device='CPU', engine='PATH', sampler='SOBEL
     bpy.context.scene.luxcore.config.dls_cache.enabled = False
 
     # color management
-    bpy.context.scene.display_settings.display_device = 'SRGB'
-    bpy.context.scene.view_settings.view_transform = 'FILMIC'
+    bpy.context.scene.display_settings.display_device = 'sRGB'
+    bpy.context.scene.view_settings.view_transform = 'Filmic'
     bpy.context.scene.view_settings.exposure = 0.0
     bpy.context.scene.view_settings.gamma = 1.0
-    bpy.context.scene.sequencer_colorspace_settings.name = "SRGB"
+    bpy.context.scene.sequencer_colorspace_settings.name = "sRGB"
 
     bpy.ops.render.render(write_still=True)
