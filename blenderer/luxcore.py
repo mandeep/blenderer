@@ -3,7 +3,7 @@ import bpy
 from utilities import formatted_time
 
 
-def render_rgb(output_directory, device='CPU', engine='PATH', sampler='SOBEL'):
+def render_rgb(output_directory='.', device='CPU', engine='PATH', sampler='SOBEL'):
     """Render an RGB image using the given engine into the output directory.
 
     Parameters
