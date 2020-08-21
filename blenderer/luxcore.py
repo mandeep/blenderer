@@ -10,6 +10,12 @@ def render_rgb(output_directory='.', device='CPU', engine='PATH', sampler='SOBEL
     ----------
     output_directory: str
         The directory where the rendered image is saved
+    device: str
+        The hardware to use to render the image
+    engine: str
+        The type of path tracing to perform: unidirectional or bidirectional
+    sampler: str
+        The sampler to use with the path tracing integrator
 
     Notes
     -----
