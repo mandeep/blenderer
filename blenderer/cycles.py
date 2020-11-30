@@ -1,6 +1,11 @@
-from utilities import formatted_time
-
 import bpy
+
+try:
+    from utilities import formatted_time
+except ImportError:
+    from datetime import datetime
+    def formatted_time():
+        return datetime.now().isoformat(timespec="milliseconds")
 
 
 def render_rgb(output_directory="."):
