@@ -38,7 +38,6 @@ def render_aov(engine: str, aov: str, filename: str, output_directory: str="."):
     bpy.ops.render.render(write_still=True)
 
 
-
 def render_rgb(engine: str, output_directory: str="."):
     """Render an RGB image using the given engine into the output directory.
 
@@ -146,7 +145,7 @@ def create_material_nodes(preset, mesh_name=None, color=(1.0, 1.0, 1.0)):
             mesh.data.materials.append(material)
 
 
-def render_rgb(output_directory='.', device='CPU', engine='PATH', sampler='SOBEL'):
+def render_luxcore_rgb(output_directory='.', device='CPU', engine='PATH', sampler='SOBEL'):
     """Render an RGB image using the given engine into the output directory.
 
     Parameters
